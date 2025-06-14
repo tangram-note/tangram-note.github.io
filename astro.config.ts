@@ -44,6 +44,7 @@ export default defineConfig({
           'business-contact',
           'database',
         ],
+        'streamline-color': ['map-fold-flat'],
       },
     }),
 

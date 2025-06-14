@@ -81,13 +81,26 @@ const {
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto rounded-md w-full"
+                  class="mx-auto rounded-md w-full block dark:hidden"
+                  widths={[400, 768, 1024, 2040]}
+                  style="overflow: visible;"
+                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                  loading="eager"
+                  width={1024}
+                  height={576}
+                  src={image.light}
+                  alt={image.alt}
+                />
+                <Image
+                  class="mx-auto rounded-md w-full hidden dark:block"
+                  style="overflow: visible;"
                   widths={[400, 768, 1024, 2040]}
                   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
                   loading="eager"
                   width={1024}
                   height={576}
-                  {...image}
+                  src={image.dark}
+                  alt={image.alt}
                 />
               )}
             </div>
