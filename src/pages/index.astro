@@ -113,8 +113,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/space-screenshot.png',
-      alt: 'Colorful Image',
+      src: '~/assets/images/desktop.jpg',
+      alt: 'Desktop space Analog',
     }}
   >
     <Fragment slot="content">
@@ -148,8 +148,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: '~/assets/images/search.jpg',
+      alt: 'Search Image',
     }}
   >
     <Fragment slot="content">
@@ -201,40 +201,6 @@ const metadata = {
     ]}
   />
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
   <!-- Features2 Widget ************** -->
 
   <Features2
@@ -242,9 +208,44 @@ const metadata = {
     subtitle="我们提供完整的知识交互工具箱，帮助你与自己的知识库进行交互，形成对话"
     items={[
       {
+        title: '知识库',
+        icon: 'flat-color-icons:library',
+        description: '所有的知识（笔记）都存储在同一个库中，正如我们的大脑一样，这是实现知识联通性的基础。',
+      },
+      {
+        title: '历史记录',
+        description: "我们将自动记录笔记的访问和修改、搜索的关键词记录、空间的访问记录等用户数据。我们将时间信息融入到 Tangram 的方方面面，留下您思维成长的足迹。而您产生的所有数据完全归属您个人。<strong>我们恪守最高隐私标准，让您的数据真正服务于您</strong>。",
+        icon: 'flat-color-icons:clock',
+      },
+      {
         title: '语境感知',
         description: "随着用户焦点的不断移转，相关联的推荐信息也将不断变换。",
         icon: 'flat-color-icons:idea',
+      },
+      {
+        title: '归档',
+        description: "对于个人知识库而言，归档能力是必要的。对于部分已经过期的知识，可以选择归档。与删除不同，归档的内容依旧存在，未来有需要时也可重新唤醒（激活）。",
+        icon: 'flat-color-icons:filing-cabinet',
+      },
+      {
+        title: '分类体系（Category）',
+        description: "层级分类是管理复杂度的有效方法，对于个人知识库而言也同样有效。灵活动态的知识网络，再叠加上层级分类体系，能更清晰地呈现知识的结构。",
+        icon: 'flat-color-icons:parallel-tasks',
+      },
+      {
+        title: '标签（Tagging）',
+        description: "标签是一种灵活组织信息的有效方法，一个笔记可打多个标签，告别单一文件夹的束缚。用标签为你的笔记创造多维入口，点击标签，瞬间过滤出所有相关内容。",
+        icon: 'flat-color-icons:timeline',
+      },
+      {
+        title: '笔记专用 Markdown',
+        description: "传统 Markdown 为出版而生，繁复的层级结构常让记录分神。我们重新设计了一套笔记专属标记系统。保留 Markdown 的高效基因的同时剥离冗余语法，比如我们仅支持单级标题与单层列表。简洁的结构将让知识重组更轻盈。",
+        icon: 'flat-color-icons:file',
+      },
+      {
+        title: '支持学术工具',
+        description: "无缝连接学术生态，我们深度集成全球领先的文献管理工具 Zotero，便于研究者、学生与知识工作者调用自己积累的学术资源。",
+        icon: 'flat-color-icons:reading',
       },
     ]}
   >
@@ -253,14 +254,82 @@ const metadata = {
     </Fragment>
   </Features2>
 
+  <Features
+    id="notGoodAt"
+    title="我们不擅长的事情"
+    columns={2}
+    subtitle="我们专注于构建个人知识库，但有些事情我们不擅长做。"
+    items={[
+      {
+        title: '没有任务管理',
+        icon: 'tabler:list-check',
+        description:
+          '任务（Task）的特点是短时效性的，用完即弃的。而 Tangram 的目标是构建长期有效的知识库，因此我们主动选择不做任务管理。市场上有大量的优秀的 Todo 软件，Todoist 和滴答清单都不错',
+
+      },
+      {
+        title: '思维导图',
+        icon: 'tabler:sitemap',
+        description:
+          '虽然我们有白板（Board），但与思维导图有本质不同。我们的目标是将其与其他容器进行深度整合，帮助用户进行信息收集、思维整理等场景。如有您有思维导图的需求，思维导图软件 Xmind、MindNode 都是相当不错的选择。',
+      },
+      {
+        title: '团队协作',
+        icon: 'streamline-freehand:collaboration-meeting-team-file',
+        description:
+          'Tangram 是一款面向私人场景的软件，因此不支持团队协作。',
+      },
+      {
+        title: '多媒体信息管理',
+        icon: 'tabler:files',
+        description:
+          'Tangram 是以「文本」为核心的，我们的专注于构建个人知识库。我们不擅长管理多媒体如照片、扫描文档、收据、机票、PDF 文件、电子书籍等。如果您需要老牌软件 Devonthink 是一个不错的选择。 ',
+      }
+    ]}
+  />
+
+   <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="马上申请使用"
+    subtitle="作为早期用户，您的反馈将直接影响产品进化方向，共同打造理想工具。"
+    items={[
+      {
+        title: '步骤 1: <span class="font-medium">提交申请</span>',
+        description:
+          "为什么需要申请？在早期阶段，我们选择与有限数量的用户深度合作，确保我们能快速响应您的需求。我们相信，有节制的增长能创造更大的长期价值。",
+        icon: 'tabler:list-check',
+      },
+      {
+        title: '步骤 2: <span class="font-medium">审核与沟通</span>',
+        description:
+          "我们承诺在48小时内完成初步审核。如果您的申请需要进一步沟通，我们的团队会在3个工作日内通过邮件与您联系。",
+        icon: 'tabler:message-2-check',
+      },
+      {
+        title: '步骤 3: <span class="font-medium">付费</span>',
+        description:
+          "我们将通过邮件提供付费链接，完成付费后，我们将通过邮件发送软件下载地址和激活码。",
+        icon: 'tabler:credit-card-pay',
+      },
+      {
+        title: '步骤 2: <span class="font-medium">下载和激活</span>',
+        icon: 'tabler:package',
+        description:
+          "通过邮件中的地址进行下载，并用进行激活即可使用。",
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
+    title="阅读开发手记了解更多"
+    information={`该博客用于记录每次版本迭代的设计思考，深度解析产品设计逻辑，分享让笔记更高效的实践指南，欢迎订阅更新，我们将与你分享 Tangram 的成长历程。`}
   />
 
   <!-- FAQs Widget ******************* -->
@@ -321,7 +390,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: '申请',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
         icon: 'tabler:download',
@@ -329,12 +398,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      与你同思，与你共建
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      我们希望做出最优秀的个人知识库软件，诚邀您成为我们的同行者，与开发者团队共同塑造思维笔记工具。
     </Fragment>
   </CallToAction>
 </Layout>

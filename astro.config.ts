@@ -33,6 +33,7 @@ export default defineConfig({
     icon({
       include: {
         tabler: ['*'],
+        "streamline-freehand": ['collaboration-meeting-team-file'],
         'flat-color-icons': [
           'template',
           'gallery',
@@ -44,6 +45,14 @@ export default defineConfig({
           'business-contact',
           'database',
           'idea',
+          'todo-list',
+          'filing-cabinet',
+          'clock',
+          'parallel-tasks',
+          'timeline',
+          'library',
+          'file',
+          'reading',
         ],
         'streamline-color': ['map-fold-flat'],
       },
