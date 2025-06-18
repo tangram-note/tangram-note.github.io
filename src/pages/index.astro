@@ -1,6 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
+import { getPermalink } from '~/utils/permalinks';
+
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -16,6 +18,8 @@ const metadata = {
   title: 'Tangram Note — The Better way to interact with your knowledge',
   ignoreTitleTemplate: true,
 };
+
+const requestURL = getPermalink('/request#application');
 ---
 
 <Layout metadata={metadata}>
@@ -25,10 +29,10 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: '申请',
-        href: 'https://github.com/onwidget/astrowind',
+        text: '申请成为早期用户',
+        href: requestURL,
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:user-heart',
       },
       { text: '了解更多', href: '#features' },
     ]}
@@ -316,7 +320,7 @@ const metadata = {
         title: '步骤 2: <span class="font-medium">下载和激活</span>',
         icon: 'tabler:package',
         description:
-          "通过邮件中的地址进行下载，并用进行激活即可使用。",
+          "通过邮件中提供的链接下载软件，激活即可使用。",
       },
     ]}
     image={{
@@ -329,7 +333,6 @@ const metadata = {
 
   <BlogLatestPosts
     title="阅读开发手记了解更多"
-    information={`该博客用于记录每次版本迭代的设计思考，深度解析产品设计逻辑，分享让笔记更高效的实践指南，欢迎订阅更新，我们将与你分享 Tangram 的成长历程。`}
   />
 
   <!-- FAQs Widget ******************* -->
@@ -390,10 +393,10 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: '申请',
-        href: 'https://github.com/onwidget/astrowind',
+        text: '申请成为早期用户',
+        href: requestURL,
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:user-heart',
       },
     ]}
   >
