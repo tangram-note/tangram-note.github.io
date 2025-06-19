@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
+import { getPermalink } from '~/utils/permalinks';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -12,6 +12,8 @@ const metadata = {
   title: 'Tangram Note - 申请成为早期用户',
   ignoreTitleTemplate: true,
 };
+
+const featureLinks = getPermalink('/#features');
 ---
 
 <Layout metadata={metadata}>
@@ -26,14 +28,9 @@ const metadata = {
       },
       {
         text: '探索产品功能',
-        href: '#features',
+        href: featureLinks,
       },
     ]}
-    image={{
-      light: '~/assets/images/hero-light.png',
-      dark: '~/assets/images/hero-dark.png',
-      alt: 'Tangram Note Hero',
-    }}
   >
     <Fragment slot="title">
       申请成为 Tangram Note 早期用户
@@ -43,14 +40,14 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- Stats Section (Waitlist Counter) -->
+  <!-- Stats Section (Waitlist Counter) 
   <Stats
     stats={[
       { title: '当前申请者', amount: '1,289' },
       { title: '已获得邀请码', amount: '427' },
       { title: '预计等待时间(天)', amount: '7-14' },
     ]}
-  />
+  />-->
 
   <!-- Steps Section (申请流程) -->
   <Steps

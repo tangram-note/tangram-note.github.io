@@ -338,52 +338,44 @@ const requestURL = getPermalink('/request#application');
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="常见问题解答"
+    subtitle="了解关于 Tangram Note 的最常见问题"
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: '如何导入我现有的笔记数据?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "我们虽然支持导入 Markdown 文件，但是我们建议用户重零开始构建自己的知识库。",
       },
       {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+        title: "支持哪些设备和平台？",
+        description: "当下我们支持 macOS。未来将根据用户反馈来决定是否支持 Windows 和 Linux 平台",
+      },
+       {
+        title: " 我可以在移动端使用 Tangram Note 吗？",
+        description: "<strong>Tangram Note 当前专注于提供强大的桌面端体验</strong>。 我们认为其核心的复杂知识构建、空间化组织和深度编辑功能需要桌面级的大屏幕和精准交互才能发挥最佳效果。因此，官方移动应用暂未推出。我们理解移动访问的需求，并持续评估其可行性，未来计划请关注我们的官方公告。对于移动端快速记录灵感，建议使用其他轻量工具，稍后导入 Tangram Note 进行深度整理。",
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+        title: "Tangram Note 是免费的吗？",
+        description: "Tangram Note 本身不是免费的。初次使用时，您需要进行一次性付费购买。若希望获得软件的最新功能和更新，每年需续费，我们为续费用户提供了优惠，以表达对您长期支持的感谢。不过您放心，即便您选择不续费，您之前已经购买并安装的软件的所有功能依然可以正常使用，只是无法获得我们后续推出的最新更新版本。这样在保障您的使用权益的同时，也激励我们不断优化和创新产品，以满足更多用户的需求并持续提供优质的服务。"
       },
       {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+        title: "遇到问题如何获得帮助？",
+        description: "我们非常乐意为您提供支持！您可以首先查看帮助中心或知识库，如果无法解决你的问题，您可直接发送邮件至 walkdoer@gmail.com，我们将尽快回复您。",
       },
       {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+        title: "我的数据安全吗？是否会丢失？",
+        description: " Tangram Note 创建的数据 100% 存储于您自己的电脑硬盘上，并支持随时导出笔记为 Markdown 等开放格式，方便您额外存档，您对自己的数据拥有完全的控制权和所有权。数据丢失风险主要来自您本地设备的硬件故障，为了降低风险，我们建议您将 Tangram 的数据文件夹放置在网盘文件夹中（比如iCloud）。",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+        title: "是否支持离线使用？",
+        description: "完全支持！ Tangram Note 是一个本地应用，都提供完整的离线功能。您可以在没有网络连接时查看、编辑、创建笔记。",
       },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      {
+        title: "支持 AI 的能力吗？",
+        description: "<b>当前版本中尚不支持 AI 功能。</b> 不过，我们正在积极进行实验和开发，目标是将 AI 深度集成到软件的各个核心层级和功能模块中，作为增强创造力的智能助手。相关功能正在经过详细的测试和验证，以确保其稳定性和实用性。我们计划在未来的版本更新中正式推出 AI 的能力，请持续关注我们的发布公告！"
+      },
     ]}
   />
 
