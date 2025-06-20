@@ -41,40 +41,50 @@ const {
             itemClasses?.panel
           )}
         >
-          {(icon || defaultIcon) && (
-            <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
-          )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+          <div class="flex items-center gap-2 mb-2">
+            {(icon || defaultIcon) && (
+              <Icon
+                name={icon || defaultIcon}
+                class={twMerge('w-6 h-6', defaultIconClass, itemClasses?.icon)}
+                style="display: inline-flex; align-items: center;"
+              />
+            )}
+            <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)} style="display: inline-flex; align-items: center;">
+              {title}
+            </div>
+          </div>
           {description && (
             <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
           )}
           {image && (
-            <Image
-              src={image.lightSrc}
-              alt={image.alt || title}
-              class="w-full md:h-full rounded block dark:hidden"
-              style="overflow: visible;"
-              width={400}
-              height={300}
-              sizes="(max-width: 900px) 400px, 900px"
-              aspectRatio="4:3"
-              layout="cover"
-              loading="lazy"
-              decoding="async"
-            />
-            <Image
-              src={image.darkSrc}
-              alt={image.alt || title}
-              class="w-full md:h-full rounded hidden dark:block"
-              style="overflow: visible;"
-              width={400}
-              height={300}
-              sizes="(max-width: 900px) 400px, 900px"
-              aspectRatio="4:3"
-              layout="cover"
-              loading="lazy"
-              decoding="async"
-            />
+            <>
+              <Image
+                src={image.lightSrc}
+                alt={image.alt || title}
+                class="w-full md:h-full rounded block dark:hidden"
+                style="overflow: visible;"
+                width={400}
+                height={300}
+                sizes="(max-width: 900px) 400px, 900px"
+                aspectRatio="4:3"
+                layout="cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <Image
+                src={image.darkSrc}
+                alt={image.alt || title}
+                class="w-full md:h-full rounded hidden dark:block"
+                style="overflow: visible;"
+                width={400}
+                height={300}
+                sizes="(max-width: 900px) 400px, 900px"
+                aspectRatio="4:3"
+                layout="cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </>
           )}
           {callToAction && (
             <div class="mt-2">

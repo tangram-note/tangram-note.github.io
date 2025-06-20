@@ -1,0 +1,162 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+import Hero from '~/components/widgets/Hero.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Tangram Note - 申请成为早期用户',
+  ignoreTitleTemplate: true,
+};
+
+const featureLinks = getPermalink('/#features');
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: '申请',
+        href: '#application',
+        icon: 'tabler:user-heart',
+      },
+      {
+        text: '探索产品功能',
+        href: featureLinks,
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      申请成为 Tangram Note 早期用户
+    </Fragment>
+    <Fragment slot="subtitle">
+      诚邀您成为首批早期种子用户，与开发者共同塑造思维笔记工具的进化方向
+    </Fragment>
+  </Hero>
+
+  <!-- Value Section (核心价值) -->
+  <Features2
+    id="values"
+    title="早期用户的独特价值"
+    subtitle="成为早期用户，您不只是体验者，更是产品的共同创造者"
+    columns={4}
+    items={[
+      {
+        title: '早期接触权',
+        icon: 'tabler:star',
+        description: '抢先体验正在开发中的新功能，优先获得内部教程、最佳实践指南。',
+      },
+      {
+        title: '开发者直达',
+        icon: 'tabler:message',
+        description: '与核心开发团队直接沟通，你的反馈会深刻影响产品方向，成为共同创造者。',
+      },
+      {
+        title: '终身折扣',
+        icon: 'tabler:gift',
+        description: '所有早期用户在正式版发布时可享终身会员特别折扣，以感谢早期用户的支持。',
+      },
+      {
+        title: '同道社区',
+        icon: 'tabler:book',
+        description: '与理念相似、志同道合的先行者深度交流想法、碰撞灵感、共同学习和成长。',
+      },
+    ]}
+  />
+
+
+  <!-- Stats Section (Waitlist Counter) 
+  <Stats
+    stats={[
+      { title: '当前申请者', amount: '1,289' },
+      { title: '已获得邀请码', amount: '427' },
+      { title: '预计等待时间(天)', amount: '7-14' },
+    ]}
+  />-->
+
+  <!-- Steps Section (申请流程) -->
+  <Steps
+    id="process"
+    title="成为早期用户的简单步骤"
+    subtitle="每位参与者都是宝贵的声音，我们将与您密切协作打造理想工具"
+    items={[
+      {
+        title: '提交申请',
+        description: '填写简单的申请表单，让我们了解您的基本信息和需求场景，帮助我们评估。',
+        icon: 'tabler:edit',
+      },
+      {
+        title: '获得邀请',
+        description: '审核通过后，您将收到付费方式和下载链接。我们定期分批发放资格，确保为用户提供最优质的服务。',
+        icon: 'tabler:key',
+      },
+      {
+        title: '付费并激活软件',
+        description: '付费成功后，您将获得激活码，激活软件即可开始使用。',
+        icon: 'tabler:credit-card-pay',
+      },
+    ]}
+  />
+
+  <!-- Application Form Section -->
+  <section id="application" class="relative py-16">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-[#181C2A]"></div>
+    <div class="relative max-w-2xl mx-auto bg-white dark:bg-[#23263A] rounded-lg shadow p-8 border border-gray-100 dark:border-[#23263A]">
+      <iframe class="airtable-embed" src="https://airtable.com/embed/appJDxwmWpDDJ9xTv/pagsKYkvJ4Q8CVoHt/form" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 0px solid #ccc;"></iframe>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <FAQs
+    id="faq"
+    title="常见问题（FAQ）"
+    subtitle="为您解答关于早期用户计划的关键问题"
+    items={[
+      {
+        title: '为什么要采用申请制而非开放下载试用？',
+        description: '<strong>这主要是为了负责任地推出产品</strong>：在早期阶段我们资源有限，申请制让我们能控制用户量，使得我们能够<strong>与用户深度合作，快速响应您的需求</strong>。由衷感谢您对 Tangram Note 的兴趣和支持，我们会加速完善并早日开放下载试用！',
+      },
+      {
+        title: '早期用户申请的基本要求是什么？',
+        description: '我们欢迎各种类型的知识工作者与我们一起共建，无论您是学术研究者、内容创作者、产品设计师还是写作爱好者。我们会优先选择有笔记工具经验且能清晰表达需求的申请者。',
+      },
+      {
+        title: '提交申请后多久能通过审核？',
+        description: '我们承诺在48小时内完成初步审核。如果您的申请需要进一步沟通，我们的团队会在3个工作日内通过邮件与您联系。我们建议加入等待名单后留意您的注册邮箱，包括垃圾邮件文件夹。',
+      },
+      {
+        title: '早期的版本稳定吗？',
+        description: "虽然目前的早期版本已在内部稳定使用超过两年，并经过详细测试后才发布，但仍可能遇到不稳定或 Bug。我们会通过定期更新积极修复问题。您的使用反馈至关重要，能帮助我们持续改进！如发现问题，请随时告知。",
+      },
+      {
+        title: '使用过程中遇到问题如何反馈？',
+        description: '您可以随时通过邮件（walkdoer@gmail.com）联系我们，无论是分享建议或反馈问题。我们团队在工作日每天会查看并恢复。对于关键错误，我们会优先处理。',
+      },
+    ]}
+  />
+
+  <!-- Call To Action Section -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '立即申请',
+        href: '#application',
+        icon: 'tabler:user-heart',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      与你同思，与你共建
+    </Fragment>
+    <Fragment slot="subtitle">
+      我们希望做出最优秀的个人知识库软件，诚邀您成为我们的同行者，与开发者团队共同塑造思维笔记工具。
+    </Fragment>
+  </CallToAction>
+</Layout>

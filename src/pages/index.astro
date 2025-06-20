@@ -7,6 +7,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Features4 from '~/components/widgets/Feature4.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
@@ -19,7 +20,7 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
-const requestURL = getPermalink('/request#application');
+const requestURL = getPermalink('/early-access#application');
 ---
 
 <Layout metadata={metadata}>
@@ -31,7 +32,6 @@ const requestURL = getPermalink('/request#application');
         variant: 'primary',
         text: '申请成为早期用户',
         href: requestURL,
-        target: '_blank',
         icon: 'tabler:user-heart',
       },
       { text: '了解更多', href: '#features' },
@@ -59,7 +59,7 @@ const requestURL = getPermalink('/request#application');
 
   <!-- Features Widget *************** -->
 
-  <Features2
+  <Features4
     id="features"
     tagline="Features"
     title="当思考需要不同容器"
@@ -71,25 +71,44 @@ const requestURL = getPermalink('/request#application');
         icon: 'flat-color-icons:document',
         description:
           '专注书写。沉浸于线性的文字流，捕捉灵感，撰写文章，不受干扰。',
-
+        image: {
+          lightSrc: '~/assets/images/screenshot-page.png',
+          darkSrc: '~/assets/images/screenshot-page.dark.png',
+          alt: 'Page',
+        },
       },
       {
         title: '白板（Board）',
         icon: 'streamline-color:map-fold-flat',
         description:
-          '自由组织的视觉化笔记。自由连接。在白板空间里拖拽、绘制、连接想法，探索非线性的关联',
+          '自由组织的视觉化笔记。在空间里拖拽、绘制、连接想法，探索非线性的关联',
+        image: {
+          lightSrc: '~/assets/images/screenshot-board.png',
+          darkSrc: '~/assets/images/screenshot-board.dark.png',
+          alt: 'Board',
+        },
       },
       {
         title: '堆（Stack）',
         icon: 'flat-color-icons:template',
         description:
           '编写结构化长文本，用层级结构组织想法、大纲和列表，让复杂关系一目了然。',
+        image: {
+          lightSrc: '~/assets/images/screenshot-stack.png',
+          darkSrc: '~/assets/images/screenshot-stack.dark.png',
+          alt: 'Stack',
+        },
       },
       {
         title: '集合（Collection）',
         icon: 'flat-color-icons:database',
         description:
           '有序汇集，像数据库一样灵活地整理信息、条目和资料，便于查找和关联',
+        image: {
+          lightSrc: '~/assets/images/screenshot-collection.png',
+          darkSrc: '~/assets/images/screenshot-collection.dark.png',
+          alt: 'Collection',
+        },
       }
     ]}
   />
@@ -265,69 +284,34 @@ const requestURL = getPermalink('/request#application');
     subtitle="我们专注于构建个人知识库，但有些事情我们不擅长做。"
     items={[
       {
-        title: '没有任务管理',
+        title: '不支持任务管理',
         icon: 'tabler:list-check',
         description:
           '任务（Task）的特点是短时效性的，用完即弃的。而 Tangram 的目标是构建长期有效的知识库，因此我们主动选择不做任务管理。市场上有大量的优秀的 Todo 软件，Todoist 和滴答清单都不错',
 
       },
       {
-        title: '思维导图',
+        title: '不适合做思维导图',
         icon: 'tabler:sitemap',
         description:
           '虽然我们有白板（Board），但与思维导图有本质不同。我们的目标是将其与其他容器进行深度整合，帮助用户进行信息收集、思维整理等场景。如有您有思维导图的需求，思维导图软件 Xmind、MindNode 都是相当不错的选择。',
       },
       {
-        title: '团队协作',
+        title: '不支持团队协作',
         icon: 'streamline-freehand:collaboration-meeting-team-file',
         description:
           'Tangram 是一款面向私人场景的软件，因此不支持团队协作。',
       },
       {
-        title: '多媒体信息管理',
+        title: '不是 All in One 的信息管理工具',
         icon: 'tabler:files',
         description:
-          'Tangram 是以「文本」为核心的，我们的专注于构建个人知识库。我们不擅长管理多媒体如照片、扫描文档、收据、机票、PDF 文件、电子书籍等。如果您需要老牌软件 Devonthink 是一个不错的选择。 ',
+          'Tangram 是以「文本」为核心的，我们的专注于构建个人知识库。我们不擅长管理多媒体如照片、扫描文档、收据、机票、PDF 文件、电子书籍等。如果您需要，老牌软件 Devonthink 是一个不错的选择。 ',
       }
     ]}
   />
 
    <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="马上申请使用"
-    subtitle="作为早期用户，您的反馈将直接影响产品进化方向，共同打造理想工具。"
-    items={[
-      {
-        title: '步骤 1: <span class="font-medium">提交申请</span>',
-        description:
-          "为什么需要申请？在早期阶段，我们选择与有限数量的用户深度合作，确保我们能快速响应您的需求。我们相信，有节制的增长能创造更大的长期价值。",
-        icon: 'tabler:list-check',
-      },
-      {
-        title: '步骤 2: <span class="font-medium">审核与沟通</span>',
-        description:
-          "我们承诺在48小时内完成初步审核。如果您的申请需要进一步沟通，我们的团队会在3个工作日内通过邮件与您联系。",
-        icon: 'tabler:message-2-check',
-      },
-      {
-        title: '步骤 3: <span class="font-medium">付费</span>',
-        description:
-          "我们将通过邮件提供付费链接，完成付费后，我们将通过邮件发送软件下载地址和激活码。",
-        icon: 'tabler:credit-card-pay',
-      },
-      {
-        title: '步骤 2: <span class="font-medium">下载和激活</span>',
-        icon: 'tabler:package',
-        description:
-          "通过邮件中提供的链接下载软件，激活即可使用。",
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
 
   <!-- HighlightedPosts Widget ******* -->
 
@@ -357,8 +341,8 @@ const requestURL = getPermalink('/request#application');
         description: "<strong>Tangram Note 当前专注于提供强大的桌面端体验</strong>。 我们认为其核心的复杂知识构建、空间化组织和深度编辑功能需要桌面级的大屏幕和精准交互才能发挥最佳效果。因此，官方移动应用暂未推出。我们理解移动访问的需求，并持续评估其可行性，未来计划请关注我们的官方公告。对于移动端快速记录灵感，建议使用其他轻量工具，稍后导入 Tangram Note 进行深度整理。",
       },
       {
-        title: "Tangram Note 是免费的吗？",
-        description: "Tangram Note 本身不是免费的。初次使用时，您需要进行一次性付费购买。若希望获得软件的最新功能和更新，每年需续费，我们为续费用户提供了优惠，以表达对您长期支持的感谢。不过您放心，即便您选择不续费，您之前已经购买并安装的软件的所有功能依然可以正常使用，只是无法获得我们后续推出的最新更新版本。这样在保障您的使用权益的同时，也激励我们不断优化和创新产品，以满足更多用户的需求并持续提供优质的服务。"
+        title: "Tangram Note 如何收费？",
+        description: "Tangram Note 首次购买获得永久使用权，后续按年付费获取更新（不续费仍可继续使用旧版本，但无法升级）。这样在保障您的使用权益的同时，也激励我们不断优化产品以满足您的需求。"
       },
       {
         title: "遇到问题如何获得帮助？",
@@ -387,7 +371,6 @@ const requestURL = getPermalink('/request#application');
         variant: 'primary',
         text: '申请成为早期用户',
         href: requestURL,
-        target: '_blank',
         icon: 'tabler:user-heart',
       },
     ]}
