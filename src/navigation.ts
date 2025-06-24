@@ -11,10 +11,10 @@ export const headerData = {
       text: '博客',
       href: getBlogPermalink(),
     },
-    {
-      text: '价格',
-      href: getPermalink('/pricing'),
-    },
+    // {
+    //   text: '价格',
+    //   href: getPermalink('/pricing'),
+    // },
     {
       text: '联系我们',
       href: getPermalink('/contact'),
@@ -34,7 +34,7 @@ export const footerData = {
       title: 'Product',
       links: [
         { text: 'Features', href: '#features' },
-        { text: 'Pricing', href: getPermalink('/pricing'), },
+        // { text: 'Pricing', href: getPermalink('/pricing'), },
         { text: 'Resources', href: '#' },
         { text: 'Use Cases', href: '#' },
       ],
