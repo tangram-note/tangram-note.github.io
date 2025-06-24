@@ -118,19 +118,19 @@ const requestURL = getPermalink('/early-access#application');
     id="flows"
     title="让信息自由流通"
     columns={2}
-    subtitle="Tangram Note 致力于减少信息在不同形态间迁移的摩擦，我们打破不同容器之间的边界，让信息能够自由流通。"
+    subtitle="Tangram Note 致力于减少信息在不同形态间迁移的摩擦"
     items={[
       {
         title: '信息在不同容器间自由流动',
-        icon: 'fluent-emoji-flat:clipboard',
+        icon: 'flat-color-icons:serial-tasks',
         description:
-          '在不同容器间自由流动的信息，Tangram Note 会做好转化工作，无论是从页面到白板，还是从堆到集合，信息都能保持一致的格式和结构。让用户不用分心于工具，专注于思维本身。',
+          '我们打破不同容器之间的边界，让信息能够自由流通。无论是从页面到白板，还是从堆到集合，信息都能保持一致的格式和结构。让用户不用分心于工具，专注于思维本身。',
       },
       {
         title: '告别复制粘贴的割裂感',
-          icon: 'flat-color-icons:serial-tasks',
+        icon: 'fluent-emoji-flat:clipboard',
         description:
-          '内容保持关联性，迁移后依然可追溯，维护知识之间的原始联系，维护知识之间的原始联系。',
+          '您只管复制和粘贴，Tangram Note 会帮你处理好各种格式的转化。而且复制的内容也将与原本内容保持关联性，未来可追溯源头，维护知识之间的相互联系。',
       },
       {
         title: '自由导出',
@@ -144,7 +144,8 @@ const requestURL = getPermalink('/early-access#application');
 
   <Content
     isReversed
-    title="🧰 精心设计的思维工具箱"
+    title="🧰 完整的思维工具箱"
+    subtitle="让您与自己的知识库深度互动，展开深度对话"
     items={[
       {
         title: '超越普通链接，定义知识间的关系本质',
@@ -230,8 +231,9 @@ const requestURL = getPermalink('/early-access#application');
       },
     ]}
     image={{
-      src: '~/assets/images/search.jpg',
+      src: '~/assets/images/search-2.png',
       alt: 'Search Image',
+      className: 'bg-transparent shadow-none',
     }}
   >
     <Fragment slot="content">
@@ -350,7 +352,7 @@ const requestURL = getPermalink('/early-access#application');
     id="notGoodAt"
     title="我们不擅长的事情"
     columns={2}
-    subtitle="我们专注于构建个人知识库，不追求 All In One，所以有些事情我们不擅长做。"
+    subtitle="我们专注于构建个人知识库，不追求 All In One，所以有些事情我们主动选择不做"
     items={[
       {
         title: '不支持任务管理',
