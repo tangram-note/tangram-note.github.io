@@ -64,6 +64,7 @@ export default defineConfig({
           'process',
           'calendar',
           'landscape',
+          'genealogy',
         ],
         'streamline-color': ['map-fold-flat'],
         'fluent-emoji-flat': ['potted-plant', 'clipboard', 'link'],

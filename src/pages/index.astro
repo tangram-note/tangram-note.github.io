@@ -114,32 +114,6 @@ const requestURL = getPermalink('/early-access#application');
     ]}
   />
 
-  <Features4
-    id="flows"
-    title="让信息自由流通"
-    columns={2}
-    subtitle="Tangram Note 致力于减少信息在不同形态间迁移的摩擦"
-    items={[
-      {
-        title: '信息在不同容器间自由流动',
-        icon: 'flat-color-icons:serial-tasks',
-        description:
-          '我们打破不同容器之间的边界，让信息能够自由流通。无论是从页面到白板，还是从堆到集合，信息都能保持一致的格式和结构。让用户不用分心于工具，专注于思维本身。',
-      },
-      {
-        title: '告别复制粘贴的割裂感',
-        icon: 'fluent-emoji-flat:clipboard',
-        description:
-          '您只管复制和粘贴，Tangram Note 会帮你处理好各种格式的转化。而且复制的内容也将与原本内容保持关联性，未来可追溯源头，维护知识之间的相互联系。',
-      },
-      {
-        title: '自由导出',
-        description: '支持一键导出 PDF、HTML 和 Markdown 等多种格式，支援用户不同场景的需求，便于与其他工具进行联通。我们也会倾听用户建议，持续丰富导出格式，增加联通的平台和工具。',
-        icon: 'flat-color-icons:export',
-      }
-    ]}
-  />
-
   <!-- 为深度思考而设计的界面交互 -->
 
   <Features4
@@ -148,21 +122,38 @@ const requestURL = getPermalink('/early-access#application');
     subtitle="在深度专注与灵活协作间取得平衡，让思考自然流动"
     columns={2}
     items={[
+       {
+        title: '知识导航器',
+        description: '浏览器式前进 / 回溯动线，自动生成「访问路径图谱」。像浏览器一样前进 / 后退导航，可视化展示知识探索路径，随时跳转到任意历史节点，导出思考路径用于复盘。',
+        image: {
+          lightSrc: '~/assets/images/mindflow.light.png',
+          darkSrc: '~/assets/images/mindflow.dark.png',
+          alt: 'Split Panes',
+        },
+      },
+      
       {
+        title: '空间分割布局',
+        description: '支持屏幕自由分区，让知识之间的协同如呼吸般自然。轻松实现：笔记对照编辑：多个笔记对照阅读，提升学习效率。数据跨窗引用：支持拖拽内容跨区引用。',
+        image: {
+          lightSrc: '~/assets/images/split-panes.light.png',
+          darkSrc: '~/assets/images/split-panes.dark.png',
+          alt: 'Split Panes',
+        },
+      },
+     {
         title: '保护注意力',
         description: '我们以「保护用户注意力」为第一准则，提供沉浸式书写环境。每一处留白、每一种颜色的使用、每一处信息的展示，我们都经历过详细的设计。',
       },
       {
-        title: '空间分割布局',
-        description: '支持屏幕自由分区，让知识之间的协同如呼吸般自然。轻松实现：笔记对照编辑：多个笔记对照阅读，提升学习效率。数据跨窗引用：支持拖拽内容跨区引用。',
-      },
-      {
-        title: '知识导航器',
-        description: '浏览器式前进 / 回溯动线，自动生成「访问路径图谱」。像浏览器一样前进 / 后退导航，可视化展示知识探索路径，随时跳转到任意历史节点，导出思考路径用于复盘。',
-      },
-      {
         title: '悬浮气泡',
-        description: '悬浮笔记链接时，自动以悬浮气泡的交互打开关联笔记，只展示笔记关键信息，降低用户认知负担，快速浏览后自动收起，**不打断你当前的工作流。**如有需要，支持多张卡片同时参考，支持将卡片移入到软木板暂存区，支持将卡片展开为窗口完整查看。',
+        description: `悬浮笔记链接时，自动以悬浮气泡的交互打开关联笔记，只展示笔记关键信息，降低用户认知负担，快速浏览后自动收起，不打断你当前的工作流。
+        <ul class="list-none pl-2 mt-2 text-muted">
+          <li><span class="text-green-600">✓</span> 如有需要，支持多张卡片同时参考</li>
+          <li><span class="text-green-600">✓</span> 支持将卡片移入到软木板暂存区</li>
+          <li><span class="text-green-600">✓</span> 支持将卡片展开为窗口完整查看</li>
+        </ul>
+        `,
       },
       {
         title: '空间快捷栏（Space Dock）',
@@ -175,35 +166,64 @@ const requestURL = getPermalink('/early-access#application');
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    title="🧰 完整的思维工具箱"
-    subtitle="让您与自己的知识库深度互动，展开深度对话"
+   <Features4
+    id="interaction"
+    title="类型链接，深度关联"
+    subtitle="超越普通链接，定义知识间的关系本质，人物关系、概念结构、分类体系皆可基于链接来构建。"
+    columns={2}
     items={[
       {
-        title: '超越普通链接，定义知识间的关系本质',
-        description: '普通链接只能告诉你 “这里有关联”，而类型链接会清晰地告诉你 “这是怎样的关联”。',
-      },
-      
-      {
+        icon: 'flat-color-icons:mind-map',
         title: '编织知识间的语义网络',
-        description: `通过"属于"、"引用"、"标签"、"包含"等类型链接，通过类型链接，你可以清晰地表达笔记之间的关系和语义。`,
+        description: '普通链接只能告诉你 “这里有关联”，而类型链接会清晰地告诉你 “这是怎样的关联”。通过类型链接，你可以清晰地表达笔记之间的关系和语义。',
       },
       {
+        icon: 'flat-color-icons:idea',
         title: '深度对话与惊喜发现的基石',
-        description: `通过类型链接，笔记之间的关系不再是简单的连接，而是有意义的对话。让你在探索中获得意外的洞见。`,
+        description: '通过类型链接，笔记之间的关系不再是简单的连接，而是有意义的对话。让你在探索中获得意外的洞见。',
+      },
+      {
+        title: '分类体系（Category）',
+        description: "层级分类是管理复杂度的有效方法，我们从知识网络中提取出层级结构，清晰呈现您的知识结构。基于类型链接，您无需提前搭建分类结构，可以在日复一日的记录中自然形成。",
+        icon: 'flat-color-icons:genealogy',
+      },
+      {
+        title: '标签（Tagging）',
+        description: "Tangram 的标签系统同样基于类型链接。标签是一种灵活组织信息的有效方法，一个笔记可打多个标签，告别单一文件夹的束缚。用标签为你的笔记创造多维入口，点击标签，瞬间过滤出所有相关内容。",
+        icon: 'flat-color-icons:timeline',
+      },
+    ]}
+  />
+
+
+  <!-- Content Widget **************** -->
+    <Content
+    isReversed
+    items={[
+      {
+        title: '快速检索面板',
+        description: `无论你身在哪处界面，轻按 ⌘ O 即可唤出一个轻盈面板，无需跳转页面便能瞬间定位内容。`,
+      },
+      {
+        title: '全文检索',
+        description:
+          '全文搜索将覆盖所有笔记内容，让查找笔记变得易如反掌，不再担心找不到过往记录。',
+      },
+      {
+        title: '良好的中文支持',
+        description:
+          '支持中文分词，带来更好的中文搜索体验。',
       },
     ]}
     image={{
-      src: '~/assets/images/knowledge-graph-image-2.jpeg',
-      alt: 'knowledge graph image',
+      src: '~/assets/images/search-2.png',
+      alt: 'Search Image',
+      className: 'bg-transparent shadow-none',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">类型链接，深度关联</h3>
-        超越普通链接，定义知识间的关系本质。
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">瞬间抵达任何想法</h3>
+      人的记忆常有模糊时刻，但笔记不应有难以寻觅的内容。Tangram 提供「快速搜索」+「全文检索」
     </Fragment>
 
     <Fragment slot="bg">
@@ -231,49 +251,17 @@ const requestURL = getPermalink('/early-access#application');
       },
     ]}
     image={{
-      src: '~/assets/images/desktop.jpg',
+      // display the whole image
+      className: 'bg-transparent shadow-none w-full h-auto mt-10',
+      src: '~/assets/images/multiple-spaces.png',
+      width: 770,
+      height: 500,
       alt: 'Desktop space Analog',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">工作空间，你的专属桌面</h3>
       你的所有项目都有一个专属的办公桌，所有的东西都和你最后一次离开保持一样的状态。
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    items={[
-      {
-        title: '快速检索面板',
-        description: `无论你身在哪处界面，轻按 ⌘ O 即可唤出一个轻盈面板，无需跳转页面便能瞬间定位内容。`,
-      },
-      {
-        title: '全文检索',
-        description:
-          '全文搜索将覆盖所有笔记内容，让查找笔记变得易如反掌，不再担心找不到过往记录。',
-      },
-      {
-        title: '良好的中文支持',
-        description:
-          '支持中文分词，带来更好的中文搜索体验。',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/search-2.png',
-      alt: 'Search Image',
-      className: 'bg-transparent shadow-none',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">瞬间抵达任何想法</h3>
-      人的记忆常有模糊时刻，但笔记不应有难以寻觅的内容。Tangram 提供「快速搜索」+「全文检索」
     </Fragment>
 
     <Fragment slot="bg">
@@ -320,7 +308,7 @@ const requestURL = getPermalink('/early-access#application');
         title: '自由组织+结构化',
         icon: 'flat-color-icons:template',
         description:
-          '完全自由只会导致混乱，而僵化的结构又会限制创意。我们相信，有限制的自由能够激发创造力。我们希望通过提供多种信息容器，助力用户编制各种小型结构，不断种下种子。'
+          '完全自由只会导致混乱，而僵化的结构又会限制创意。我们相信，有限制的自由能够激发创造力。我们在提供编织灵活知识网络的同时，也助力用户编制各种小型结构。<strong>让知识既能自由流动，又能有序组织。</strong>',
       }
     ]}
   />
@@ -329,12 +317,18 @@ const requestURL = getPermalink('/early-access#application');
 
   <Features2
     title="更多特性"
-    subtitle="我们提供完整的<strong>知识交互工具箱</strong>，帮助您与自己的知识库进行<strong>交互</strong>，形成绵密的<strong>对话</strong>。"
+    subtitle="我们还有更多丰富的特性，支持用户的复杂的思考过程"
     items={[
       {
         title: '知识库',
         icon: 'flat-color-icons:library',
         description: '所有的知识（笔记）都存储在同一个库中，正如我们的大脑一样，这是实现知识联通性的基础。',
+      },
+      {
+        title: '告别复制粘贴的割裂感',
+        icon: 'fluent-emoji-flat:clipboard',
+        description:
+          '您只管复制和粘贴，Tangram Note 会帮你处理好各种格式的转化。而且复制的内容也将与原本内容保持关联性，未来可追溯源头，维护知识之间的相互联系。',
       },
       {
         title: '历史记录',
@@ -352,16 +346,6 @@ const requestURL = getPermalink('/early-access#application');
         icon: 'flat-color-icons:filing-cabinet',
       },
       {
-        title: '分类体系（Category）',
-        description: "层级分类是管理复杂度的有效方法，对于个人知识库而言也同样有效。灵活动态的知识网络，再叠加上层级分类体系，能更清晰地呈现知识的结构。",
-        icon: 'flat-color-icons:parallel-tasks',
-      },
-      {
-        title: '标签（Tagging）',
-        description: "标签是一种灵活组织信息的有效方法，一个笔记可打多个标签，告别单一文件夹的束缚。用标签为你的笔记创造多维入口，点击标签，瞬间过滤出所有相关内容。",
-        icon: 'flat-color-icons:timeline',
-      },
-      {
         title: '笔记专用 Markdown',
         description: "传统 Markdown 为出版而生，繁复的层级结构常让记录分神。我们重新设计了一套笔记专属标记系统。保留 Markdown 的高效基因的同时剥离冗余语法，比如我们仅支持单级标题与单层列表。简洁的结构将让知识重组更轻盈。",
         icon: 'flat-color-icons:file',
@@ -373,9 +357,9 @@ const requestURL = getPermalink('/early-access#application');
       },
       {
         title: '自由导出',
-        description: '支持一键导出 PDF、HTML 和 Markdown 等多种格式，支援用户不同场景的需求。我们也会倾听用户建议，持续丰富导出格式。',
+        description: '支持一键导出 PDF、HTML 和 Markdown 等多种格式，支援用户不同场景的需求，便于与其他工具进行联通。我们也会倾听用户建议，持续丰富导出格式，增加联通的平台和工具。',
         icon: 'flat-color-icons:export',
-      }
+      },
     ]}
   >
     <Fragment slot="bg">
